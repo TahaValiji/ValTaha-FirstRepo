@@ -511,7 +511,7 @@ def main():
                 print(f'Sorry cannot accept "{playerCards[playerTurn[turn]][0]}" at the end.\n')
             NewCard, discards = drawCards(deck,1,discards,amt)
             playerDict[playerNumber[playerTurn[turn]]].extend(NewCard)
-            print(f"You can't play, you have to draw a card!    Card Drawn: {NewCard}")
+            print(f"You can't play, you have to draw a card!    Card Drawn: {NewCard[0]}")
             print(f"Current Colour: {currentColour}")
             if canplay(playerCards[playerTurn[turn]], currentColour, cardval):
                 continue
