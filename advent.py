@@ -5,19 +5,37 @@ with open("input2.txt", 'r') as file:
     lines = file.readlines()
     
     for i in range(len(lines)):
-        
-        for j in range(len(lines[i])):
+        for j in range(len(lines[i])-4):
+            t=""
+            for k in range(4):
+                t += lines[i][j+k]
             
-            # To check horizontal normal and backwards.
-            if j < len(lines[i])-4:
-                if lines[i][j:j+4] == ("XMAS" or "SAMX"):
-                    total += 1
-            
-            # To check vertical normal and backwards.
-            if i < len(lines)-4:     
-                if lines[i:i+4][j] == ("XMAS" or "SAMX"):
-                    total += 1
+            if (t == "XMAS") or (t == "SAMX"):
+                total += 1
                 
-            # To check Diagonal.
+    for i in range(len(lines)-4):
+        for j in range(len(lines[i])):
+            t=""
+            for k in range(4):
+                t += lines[i+k][j]
             
+            if (t == "XMAS") or (t == "SAMX"):
+                total += 1
+                
+    for i in range(len(lines)-3):
+        for j in range(len(lines[i])-4):
+            t=""
+            for k in range(4):
+                t += lines[i+k-1][j+k]
+                      
+            if (t == "XMAS") or (t == "SAMX"):
+                total += 1
+            
+            t=""
+            for k in range(4):
+                t += lines[i+3-k][j+k]
+                
+            if (t == "XMAS") or (t == "SAMX"):
+                total += 1
+    
 print(total)
