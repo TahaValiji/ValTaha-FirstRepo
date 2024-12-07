@@ -105,7 +105,7 @@ def left(n:int ,m: int,lines: list[str],flag: bool = True):
     return m,steps,flag,steps2
 
 def main():
-    STEPS = 0   # STEPS -> STEPS to reach obstacles and the end of the maze.
+    STEPS = 0
     STEPS2 = 0
     with open("input.txt") as file:
         lines = file.readlines()    
