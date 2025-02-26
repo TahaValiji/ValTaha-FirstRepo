@@ -1,0 +1,1 @@
+print("Ramadan mubarak mustafa and mehlam bhai")
