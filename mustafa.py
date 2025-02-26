@@ -1,1 +1,1 @@
-print("Ramadan mubarak mustafa and hozefa bhai")
+print("Ramadan mubarak mustafa and taha bhai")
